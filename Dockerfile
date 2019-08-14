@@ -4,7 +4,7 @@ FROM ${FROM_IMAGE}
 
 # install opencv for python 3
 RUN apt-get update && \
-  apt-get install -y \
+  apt-get install -y --allow-change-held-packages \
   build-essential \
   git \
   libasound2-dev \
@@ -33,7 +33,7 @@ WORKDIR /app
 ARG NCCL_NAME=nccl-repo-ubuntu1604-2.1.15-ga-cuda9.1_1-1_amd64.deb
 COPY ${NCCL_NAME} /app
 RUN dpkg -i ${NCCL_NAME}
-RUN apt-get update && apt-get install -y libnccl2 libnccl-dev
+RUN apt-get update && apt-get install -y --allow-change-held-packages libnccl2 libnccl-dev
 
 COPY requirements.txt /app/
 RUN pip3 install -v --trusted-host pypi.python.org -r requirements.txt
