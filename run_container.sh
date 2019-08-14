@@ -1,3 +1,3 @@
 docker run --gpus all \
-  -v /projects:/app \
+  -v /data/projects:/data \
   -it see
