@@ -1,6 +1,5 @@
 bleach==1.5.0
 chainer==3.2.0
-cupy==2.2.0
 cycler==0.10.0
 enum34==1.1.6
 fastrlock==0.3
@@ -22,3 +21,5 @@ tensorflow-tensorboard==0.4.0rc3
 tqdm==4.19.5
 Werkzeug==0.13
 chainerui==0.3.0
+
+pip install cupy-cuda101

@@ -4,4 +4,5 @@ docker run --gpus all \
   -v /data/projects/pixelplus:/data \
   -it see
   
-  
+cd chainer
+python fsns_demo.py . model_35000.npz /data/pixelplus/data/surfview/bw/Container/CONTAINER3_BW.png ../datasets/fsns/fsns_char_map.json
